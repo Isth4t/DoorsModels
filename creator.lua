@@ -291,7 +291,7 @@ Creator.runJumpscare = function(config)
     Face.BackgroundTransparency = 1
     Face.Position = UDim2.new(0.5, 0, 0.5, 0)
     Face.ResampleMode = Enum.ResamplerMode.Pixelated
-    Face.Size = UDim2.new(0, 150, 0, 150)
+    Face.Size = UDim2.new(0, 750, 0, 750)
     Face.Image = image1
 
     Face.Parent = Background
