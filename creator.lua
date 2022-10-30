@@ -167,9 +167,7 @@ Creator.runEntity = function(entity)
 
     -- Pre-cycle setup
 
-    
-
-    local firstRoom = workspace.CurrentRooms[Plr:GetAttribute("CurrentRoom")]
+    local firstRoom = workspace.CurrentRooms:GetChildren()[1]
 
     entity.Model:SetPrimaryPartCFrame( (firstRoom:FindFirstChild("RoomStart") and firstRoom.RoomStart.CFrame or nodes[1].CFrame + Vector3.new(0, 3.5 + entity.Config.HeightOffset, 0)) )
     entity.Model.Parent = workspace
