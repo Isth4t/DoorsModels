@@ -160,14 +160,17 @@ Creator.runEntity = function(entity)
     for _, room in next, workspace.CurrentRooms:GetChildren() do
         if room:FindFirstChild("Nodes") then
             for _, node in next, room.Nodes:GetChildren() do
-                nodes[#nodes + 1] = node
+                nodes[#nodes - 1] = node
             end
         end
     end
 
     -- Pre-cycle setup
 
-    local firstRoom = workspace.CurrentRooms:GetChildren()[1]
+    local roomTable = workspace.CurrentRooms:GetChildren()
+    table.sort(roomTable)
+
+    local firstRoom = workspace.CurrentRooms:GetChildren()[7]
 
     entity.Model:SetPrimaryPartCFrame( (firstRoom:FindFirstChild("RoomStart") and firstRoom.RoomStart.CFrame or nodes[1].CFrame + Vector3.new(0, 3.5 + entity.Config.HeightOffset, 0)) )
     entity.Model.Parent = workspace
