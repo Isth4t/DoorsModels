@@ -353,7 +353,7 @@ Spawner.runJumpscare = function(config)
     local image2 = LoadCustomAsset(config.Image2)
     local sound1, sound2 = nil, nil
 
-    sound1 = game:GetObjects("rbxassetid://11901254920")[1]
+    sound2 = game:GetObjects("rbxassetid://11901254920")[1]
 
     -- UI Construction
 
