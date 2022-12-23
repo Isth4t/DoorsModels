@@ -353,18 +353,7 @@ Spawner.runJumpscare = function(config)
     local image2 = LoadCustomAsset(config.Image2)
     local sound1, sound2 = nil, nil
 
-    if config.Sound1 then
-        sound1 = loadSound(config.Sound1)
-    end
-
-    if config.Sound2 then
-        sound2 = loadSound(config.Sound2)
-    end
-    
-    local distortEffect = Instance.new("DistortionSoundEffect")
-	distortEffect.Level = 9999999
-    distortEffect.Parent = sound2
-    distortEffect:Clone().Parent = sound1
+    sound1 = game:GetObjects("rbxassetid://11901254920")[1]
 
     -- UI Construction
 
