@@ -354,6 +354,7 @@ Spawner.runJumpscare = function(config)
     local sound1, sound2 = nil, nil
 
     sound2 = game:GetObjects("rbxassetid://11901254920")[1]
+	sound2.Parent = workspace
 
     -- UI Construction
 
@@ -376,7 +377,7 @@ Spawner.runJumpscare = function(config)
     Face.BackgroundTransparency = 1
     Face.Position = UDim2.new(0.5, 0, 0.5, 0)
     Face.ResampleMode = Enum.ResamplerMode.Pixelated
-    Face.Size = UDim2.new(0, 0.001, 0, 0.001)
+    Face.Size = UDim2.new(0, 0.1, 0, 0.1)
 
     Face.Parent = Background
     Background.Parent = JumpscareGui
