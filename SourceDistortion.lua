@@ -434,7 +434,7 @@ Spawner.runJumpscare = function(config)
     Face.Image = image2
     sound2:Play()
     
-    TS:Create(Face, TweenInfo.new(3), {Size = UDim2.new(0, 500000, 0,  500000), ImageTransparency = 0.5}):Play()
+    TS:Create(Face, TweenInfo.new(3, Enum.EasingStyle.Linear), {Size = UDim2.new(0, 50000, 0,  50000), ImageTransparency = 0.5}):Play()
     task.wait(3)
     JumpscareGui:Destroy()
     
