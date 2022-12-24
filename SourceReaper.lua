@@ -373,7 +373,7 @@ Spawner.runJumpscare = function(config)
     Background.ZIndex = 999
 
     Face.Name = "Face"
-    Face.AnchorPoint = Vector2.new(0.5, 0.5)
+    Face.AnchorPoint = Vector2.new(0.45, 0.45)
     Face.BackgroundTransparency = 1
     Face.Position = UDim2.new(0.5, 0, 0.5, 0)
     Face.ResampleMode = Enum.ResamplerMode.Pixelated
@@ -382,7 +382,7 @@ Spawner.runJumpscare = function(config)
     Face.Parent = Background
     Background.Parent = JumpscareGui
     JumpscareGui.Parent = CG
-	Face.Image = image2
+    Face.Image = "rbxassetid://11901003953"
     
     -- Tease
 
@@ -411,9 +411,9 @@ Spawner.runJumpscare = function(config)
         task.spawn(function()
             while JumpscareGui.Parent do
                 Background.BackgroundColor3 = config.Flashing[2]
-                task.wait(math.random(25, 100) / 1000)
+                task.wait(0.1)
                 Background.BackgroundColor3 = Color3.new(1, 0, 0)
-                task.wait(math.random(25, 100) / 1000)
+                task.wait(0.1)
             end
         end)
     
@@ -421,11 +421,10 @@ Spawner.runJumpscare = function(config)
 
     -- Jumpscare
     
-    Face.Image = image2
-    Face.Size = UDim2.new(0, maxTeaseSize, 0, maxTeaseSize)
+    Face.Image = "rbxassetid://11901003953"
     sound2:Play()
     
-    TS:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 500000, 0,  500000), ImageTransparency = 0.5}):Play()
+    TS:Create(Face, TweenInfo.new(1, Enum.EasingStyle.Linear), {Size = UDim2.new(0, 5000, 0,  5000), ImageTransparency = 0.5}):Play()
     task.wait(1)
     JumpscareGui:Destroy()
     
