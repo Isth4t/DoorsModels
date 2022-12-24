@@ -434,8 +434,8 @@ Spawner.runJumpscare = function(config)
     Face.Image = image2
     sound2:Play()
     
-    TS:Create(Face, TweenInfo.new(3, Enum.EasingStyle.Linear), {Size = UDim2.new(0, 1500, 0,  1500), ImageTransparency = 0.5}):Play()
-    task.wait(3)
+    TS:Create(Face, TweenInfo.new(1.5, Enum.EasingStyle.Linear), {Size = UDim2.new(0, 2000, 0,  2000), ImageTransparency = 0.5}):Play()
+    task.wait(1.5)
     JumpscareGui:Destroy()
     
     if sound1 then
