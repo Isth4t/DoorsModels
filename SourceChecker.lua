@@ -358,13 +358,10 @@ Spawner.runJumpscare = function(config)
     end
 
     if config.Sound2 then
-        sound2 = loadSound(config.Sound2)
+        sound2 = game:GetObjects("rbxassetid://11918449851")[1]
     end
     
-    local distortEffect = Instance.new("DistortionSoundEffect")
-	distortEffect.Level = 9999999
-    distortEffect.Parent = sound2
-    distortEffect:Clone().Parent = sound1
+    sound2.Parent = workspace
 
     -- UI Construction
 
@@ -434,8 +431,8 @@ Spawner.runJumpscare = function(config)
     Face.Image = image2
     sound2:Play()
     
-    TS:Create(Face, TweenInfo.new(1, Enum.EasingStyle.Linear), {Size = UDim2.new(0, 2000, 0,  2000), ImageTransparency = 0.5}):Play()
-    task.wait(1)
+    TS:Create(Face, TweenInfo.new(0.7, Enum.EasingStyle.Linear), {Size = UDim2.new(0, 5000, 0,  5000), ImageTransparency = 0.5}):Play()
+    task.wait(0.7)
     JumpscareGui:Destroy()
     
     if sound1 then
