@@ -385,6 +385,7 @@ Spawner.runJumpscare = function(config)
     Face.Position = UDim2.new(0.5, 0, 0.5, 0)
     Face.ResampleMode = Enum.ResamplerMode.Pixelated
     Face.Size = UDim2.new(0, 0.5, 0, 0.5)
+	Face.Image = image2
 
     Face.Parent = Background
     Background.Parent = JumpscareGui
