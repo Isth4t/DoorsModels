@@ -38,6 +38,8 @@ end
 
 function dragEntity(entityModel, pos, speed)
     local entityConnections = EntityConnections[entityModel]
+	
+	if not entityConnections then return end
 
     if entityConnections.movementNode then
         entityConnections.movementNode:Disconnect()
